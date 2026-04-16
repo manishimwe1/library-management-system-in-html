@@ -61,7 +61,7 @@ const navLinks = [
     {
         label:'Dashboard',
         active: false,
-        link:'/dashboard'
+        link:'/dashboard/dashboard.html'
 
     },
     {
@@ -84,18 +84,21 @@ function displayBooks(){
     books.map((book)=>{
         
         const bookElement = document.createElement('div');
+        const bookCard = document.createElement('div');
 
         const bookImage = document.createElement('img');
         const bookName = document.createElement('h2');
         const bookAuthor = document.createElement('p');
         const bookDescription = document.createElement('p');
         const bookPrice = document.createElement('p');
+        const bookSpan = document.createElement('span')
         
         bookImage.src = book.image;
         bookName.textContent = book.name;
         bookAuthor.textContent = `Author: ${book.author}`;
         bookDescription.textContent = book.description;
-        bookPrice.textContent = `Price: $${book.price.toFixed(2)}`;
+        bookPrice.textContent = `Price: `;
+        bookSpan.textContent = `$${book.price.toFixed(2)}`;
 
         bookElement.className = 'book-element';
         bookName.className = 'book-title';
@@ -103,13 +106,18 @@ function displayBooks(){
         bookDescription.className = 'book-desc';
         bookPrice.className = 'book-price';
         bookImage.className = 'bookImage'
+        bookCard.className = 'book-card';
+        bookSpan.className = 'book-span-price'
 
         bookElement.appendChild(bookImage);
-        bookElement.appendChild(bookName);
-        bookElement.appendChild(bookAuthor);
-        bookElement.appendChild(bookDescription);
-        bookElement.appendChild(bookPrice);
+        bookCard.appendChild(bookName);
+        bookCard.appendChild(bookAuthor);
+        bookCard.appendChild(bookDescription);
+        bookCard.appendChild(bookPrice);
+        bookPrice.appendChild(bookSpan)
 
+
+        bookElement.appendChild(bookCard);
         bookContainer.appendChild(bookElement);
 
     })
