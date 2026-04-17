@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    object-fit: cover;
+}
+
+.dash-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    border-bottom: 1px solid black;
+
+}
+
+.navlink{
+    /* background-color: grey; */
+    display: flex;
+    gap: 6px;
+    
+}
+.link{
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+.link:hover{
+    background-color: rgb(119, 119, 219);
+    color: white;
+    border-radius: 4px;
+}
+.link a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#close-modal{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px;
+}
+#close-modal:hover{
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.modal-content{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    width: 400px;
+    height:300px;
+    padding: 0 10px;
+}
+
+.book-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.form-input{
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.form-input>input, textarea{
+    width: 100%;
+    padding: 3px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+.form-input label{
+    width: 100px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.submit-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.btn-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
