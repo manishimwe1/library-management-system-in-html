@@ -47,18 +47,39 @@
               <label for="price">Price: </label>
               <input type="number" id="price" name="price" step="0.01" />
             </div>
+            <div class="form-input">
+              <label for="imageSrc">Image URL: </label>
+              <input type="file" id="imageSrc" name="imageSrc" />
+            </div>
             <div class="btn-wrapper">
-                <button class="submit-btn" type="submit" id="add-book">Add book</button>
+                <button class="submit-btn" type="submit">Add book</button>
             </div>
           </form>
         </div>
       </div>
 
       <section>
-        main content
+        <div class="books-section">
+          <h2>Books Library</h2>
+          <table class="books-table" id="book-list">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="books-tbody">
+              <!-- Books will be populated here -->
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
 
-    <script src="dashboard.js"></script>
+    <script src="./dashboard.js"></script>
   </body>
 </html>

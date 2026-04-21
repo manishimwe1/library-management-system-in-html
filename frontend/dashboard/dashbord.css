@@ -94,7 +94,7 @@
     padding: 16px;
     border-radius: 8px;
     width: 400px;
-    height:300px;
+    height:400px;
     padding: 0 10px;
 }
 
@@ -138,4 +138,85 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+
+/* Table Styles */
+.books-section {
+    padding: 20px;
+}
+
+.books-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.books-table thead {
+    background-color: #333;
+    color: white;
+}
+
+.books-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+.books-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.books-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.book-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.btn-edit, .btn-delete {
+    padding: 6px 12px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(244, 67, 54, 0.3);
 }
